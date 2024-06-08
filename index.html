@@ -6,13 +6,24 @@
   <title>Starter-Forms</title>
 </head>
 <body>
-  <h1>Preencha este simples formulário</h1>
-  <form action="cadastro-rapido.java" autocomplete="off" method="get">
-    <p><label for="yourname">Nome:</label>
-    <input type="text" name="seunome" id="yourname"></p>
-    <p><label for="yourlastname">Sobrenome:</label>
-    <input type="text" name="seusobrenome" id="yourlastname"></p>
-    <input type="submit" value="Enviar">
+  <h1>Preencha este simples formulário para realizar seu cadastro-rapido</h1>
+  <form action="cadastro-rapido.java" autocomplete="on" method="get">
+    <p>
+      <label for="yourname">Nome:</label>
+      <input type="text" name="seunome" id="yourname" autocomplete="given-name" placeholder="First Name" required>
+    </p>
+    <p>
+      <label for="yourlastname">Sobrenome:</label>
+      <input type="text" name="seusobrenome" id="yourlastname" autocomplete="family-name" placeholder="Last Name" required>
+    </p>
+    <p>
+      <label for="pass">Senha: </label>
+      <input type="password" name="senha" id="pass" autocomplete="new-password" minlength="8" maxlength="20" placeholder="New Password" required>
+    </p>
+    <p>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar tudo">
+    </p>
   </form>
 </body>
 </html>
